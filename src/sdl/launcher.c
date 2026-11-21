@@ -109,6 +109,8 @@ static int SdlParsePortArguments(int *argumentCount, char **arguments,
                 SDL_arraysize(g_apszSdlLauncherJoystickAxes));
         } else if (strcmp(argument, "--ega") == 0) {
             launcherOptions->egaDither = 1;
+        } else if (strncmp(argument, "--dump-subtitles=", 17) == 0) {
+            g_pszSdlSubtitleDumpDir = argument + 17;
         } else {
             arguments[outputArgumentIndex++] = argument;
         }

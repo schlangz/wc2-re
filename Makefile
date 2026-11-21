@@ -430,6 +430,7 @@ MODERN_GAME_HOST_SRCS = \
 	src/sdl/gl_renderer.c \
 	src/sdl/joystick.c \
 	src/sdl/music.c \
+	src/sdl/subtitle_dump.c \
 	src/sdl/video.c
 MODERN_GAME_HOST_CXX_SRCS = \
 	src/sdl/originfx.cpp \

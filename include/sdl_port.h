@@ -187,6 +187,9 @@ void SdlPumpEvents(void);
 void SdlPaceTitleFrame(int ticks);
 extern int g_bSdlCutsceneOnly;
 extern int g_bSdlBalancedDifficulty;
+extern char *g_pszSdlSubtitleDumpDir;
+void SdlDumpCutsceneTextEntries(char **entries, short count);
+void SdlRunSubtitleDumpAndExit(void);
 short SdlGetBalancedCollisionRadius(short object);
 void SdlSetMouseGrab(int enabled);
 void SdlDrawViewportStatic(struct Viewport *viewport, int effect,

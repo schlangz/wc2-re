@@ -704,6 +704,10 @@ unsigned int ParseCutsceneContainer(void *scenePacket)
             textResource->owner = g_nCutsceneResourceLevel_00499d98;
             textResource->entries = decodedResource.data;
             g_pCutsceneTextResources_0049289c = textResource;
+#ifdef SDL_PORT
+            SdlDumpCutsceneTextEntries((char **)decodedResource.data,
+                                       decodedResource.count);
+#endif
             break;
         default:
             cursor = formEnd;

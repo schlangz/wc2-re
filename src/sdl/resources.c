@@ -357,6 +357,10 @@ int SdlOriginalTitleSequenceAvailable(void)
         "GAMEDAT/WING2.TIM", "WING2.TIM"
     };
 
+    if (g_pszSdlSubtitleDumpDir != 0) {
+        SdlRunSubtitleDumpAndExit();
+        return 0;
+    }
     if (g_bSdlCutsceneOnly != 0) {
         SdlRunSelectedCampaignCutscene();
         SdlFinishCutsceneOnly();
